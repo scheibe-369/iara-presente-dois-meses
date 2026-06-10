@@ -71,7 +71,7 @@ export const copy: Record<Lang, Copy> = {
       topName: GIRLFRIEND_NAME,
       bottomLine: "You're my bomb girl",
       bottomSub: 'certified Bomb Devil — just like Reze 💣',
-      denjiHeart: "you have Denji's heart",
+      denjiHeart: "you have mine Denji's heart",
       replay: 'Re-arm',
       heartPhrases: ['i love you'],
       overlays: {
@@ -107,7 +107,7 @@ export const copy: Record<Lang, Copy> = {
       topName: GIRLFRIEND_NAME,
       bottomLine: 'Você é minha garota bomba',
       bottomSub: 'Bomb Devil certificada — igual à Reze 💣',
-      denjiHeart: "você tem o Denji's heart",
+      denjiHeart: "você tem o meu Denji's heart",
       replay: 'Rearmar',
       heartPhrases: ['eu te amo'],
       overlays: {
