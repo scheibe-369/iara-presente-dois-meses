@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Caveat:wght@500;700&family=Fira+Code:wght@400;500&family=Inter:wght@400;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", monospace;
+  --font-stencil: "Black Ops One", system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --color-pink-soft: #ff8fb1;
+  --color-pink-deep: #ff4d6d;
+  --color-brand-red: #ff003c;
+  --color-ember: #ff6b35;
+  --color-spark: #ffcf5c;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-white selection:bg-brand-red/30;
+    overflow: hidden;
+  }
+}
+
+/* blinking terminal cursor */
+.terminal-cursor {
+  border-right: 2px solid #ff4d6d;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  from, to { border-color: transparent; }
+  50% { border-color: #ff4d6d; }
+}
+
+/* glow utilities */
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.5), 0 0 20px rgba(255, 77, 109, 0.3);
+}
+.glow-text-strong {
+  text-shadow:
+    0 0 8px rgba(255, 0, 60, 0.8),
+    0 0 24px rgba(255, 0, 60, 0.5),
+    0 0 48px rgba(255, 77, 109, 0.4);
+}
+
+/* drifting scanline */
+.scanline {
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.02) 50%, rgba(0,0,0,0) 100%);
+  opacity: 0.1;
+  position: absolute;
+  bottom: 100%;
+  animation: scanline 10s linear infinite;
+  pointer-events: none;
+}
+@keyframes scanline {
+  0% { bottom: 100%; }
+  100% { bottom: -100px; }
+}
+
+/* radial vignette for depth */
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(0,0,0,0.55) 100%);
+}
