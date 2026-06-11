@@ -22,17 +22,18 @@ export default function RevealScene({ onReArm }: RevealSceneProps) {
     >
       <HeartCanvas phrases={reveal.heartPhrases} />
 
-      {/* top: Valentine's Day headline (above the heart) */}
+      {/* top: Valentine's Day headline (above the heart) — width-capped and
+          centered so the long copy never reaches the corner overlays. */}
       <motion.div
         initial={{ opacity: 0, y: -24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.6, duration: 1 }}
-        className="absolute top-[6%] z-20 text-center"
+        className="absolute left-1/2 top-[7%] z-20 w-[88%] max-w-xl -translate-x-1/2 px-2 text-center md:top-[6%]"
       >
-        <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.5em] text-pink-soft/50">
+        <p className="mb-2 font-mono text-[9px] uppercase tracking-[0.3em] text-pink-soft/50 md:mb-3 md:text-[10px] md:tracking-[0.5em]">
           {reveal.tag}
         </p>
-        <h1 className="font-stencil glow-text-strong text-3xl uppercase leading-tight text-pink-deep md:text-5xl">
+        <h1 className="font-stencil glow-text-strong text-2xl uppercase leading-tight text-pink-deep md:text-5xl">
           {reveal.topLine}
         </h1>
       </motion.div>
@@ -81,8 +82,9 @@ export default function RevealScene({ onReArm }: RevealSceneProps) {
         </motion.button>
       </motion.div>
 
-      {/* tech overlays — Chainsaw Man / Reze flavor */}
-      <div className="absolute left-8 top-8 z-20 space-y-1 font-mono text-[10px] uppercase tracking-widest text-white/15">
+      {/* tech overlays — Chainsaw Man / Reze flavor. Hidden on phones so they
+          never collide with the centered headline / tag. */}
+      <div className="absolute left-8 top-8 z-20 hidden space-y-1 font-mono text-[10px] uppercase tracking-widest text-white/15 md:block">
         {reveal.overlays.topLeft.map((l) => (
           <div key={l}>{l}</div>
         ))}
