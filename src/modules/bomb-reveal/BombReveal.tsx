@@ -14,7 +14,7 @@ const pageFromHash = (): 'intro' | 'reveal' =>
 
 /**
  * Orchestrates the three-act Bomb Devil reveal:
- * intro terminal → detonation → beating heart with the anniversary note.
+ * intro terminal → detonation → beating heart with the Valentine's Day note.
  *
  * The intro and the reveal are distinct browser-history entries, so the back
  * button returns to the intro. Advancing only happens via "Detonate message".

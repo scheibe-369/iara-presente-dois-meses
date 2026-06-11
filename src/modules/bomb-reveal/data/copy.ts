@@ -67,7 +67,7 @@ export const copy: Record<Lang, Copy> = {
     },
     reveal: {
       tag: 'detonation complete',
-      topLine: 'Happy Two Months',
+      topLine: "Happy Valentine's Day",
       topName: GIRLFRIEND_NAME,
       bottomLine: "You're my bomb girl",
       bottomSub: 'certified Bomb Devil — just like Reze 💣',
@@ -103,7 +103,7 @@ export const copy: Record<Lang, Copy> = {
     },
     reveal: {
       tag: 'detonação completa',
-      topLine: 'Feliz 2 Meses',
+      topLine: 'Feliz Dia dos Namorados',
       topName: GIRLFRIEND_NAME,
       bottomLine: 'Você é minha garota bomba',
       bottomSub: 'Bomb Devil certificada — igual à Reze 💣',

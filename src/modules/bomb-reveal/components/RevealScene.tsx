@@ -7,7 +7,7 @@ interface RevealSceneProps {
   onReArm: () => void;
 }
 
-/** Stage 3 — the heart that the blast assembled, with the anniversary message. */
+/** Stage 3 — the heart that the blast assembled, with the Valentine's Day message. */
 export default function RevealScene({ onReArm }: RevealSceneProps) {
   const { t } = useLanguage();
   const reveal = t.reveal;
@@ -22,7 +22,7 @@ export default function RevealScene({ onReArm }: RevealSceneProps) {
     >
       <HeartCanvas phrases={reveal.heartPhrases} />
 
-      {/* top: anniversary headline (above the heart) */}
+      {/* top: Valentine's Day headline (above the heart) */}
       <motion.div
         initial={{ opacity: 0, y: -24 }}
         animate={{ opacity: 1, y: 0 }}
